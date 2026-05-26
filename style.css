@@ -1,0 +1,226 @@
+body {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    direction: rtl;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* منوی Hamburger */
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.menu-dropdown {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background-color: rgba(255,255,255,0.95);
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.menu-dropdown button {
+    display: block;
+    margin: 5px 0;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #1a73e8;
+    color: white;
+    transition: 0.3s;
+}
+button:hover { background-color: #155cb0; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+
+.section { display: none; margin: 30px auto; padding: 20px; width: 90%; max-width: 900px; background-color: rgba(255,255,255,0.85); border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
+/* دانش‌آموزان */
+#lessonContent p, #dastSazeh p, #geoGebra p, #baftQuestions p { font-size: 16px; line-height: 1.5; margin: 10px 0; }
+#lessonContent h3, #dastSazeh h3, #geoGebra h3, #baftQuestions h3 { font-size: 20px; margin-top: 15px; }
+#lessonContent a, #dastSazeh a, #geoGebra a, #baftQuestions a { display: inline-block; margin-top: 10px; color: #1a73e8; text-decoration: none; }
+#lessonContent a:hover, #dastSazeh a:hover, #geoGebra a:hover, #baftQuestions a:hover { text-decoration: underline; }
+
+#chatContainer { margin-top: 20px; }
+textarea { width: 80%; height: 60px; padding: 10px; font-family: Tahoma, sans-serif; direction: rtl; resize: none; border: 1px solid #ccc; border-radius: 4px; }
+#chatBox { margin-top: 15px; padding: 10px; border: 1px solid #c2c0eb; min-height: 100px; background-color: rgba(195, 193, 224, 0.8); border-radius: 4px; }
+#chatBox div { margin-bottom: 5px; }
+#chatBox button { margin-left: 10px; padding: 2px 6px; font-size: 12px; cursor: pointer; border: none; border-radius: 4px; background-color: #b11b1b; color: rgb(197, 189, 212); }
+#chatBox button:hover { background-color: #ff4c4c; }
+
+.student-menu { margin: 20px 0; }
+.student-menu button { width: 180px; margin: 5px auto; }
+.student-section { display: none; }
+
+/* ===== فاصله و خوانایی بهتر برای بخش والدین ===== */
+#parent p {
+    margin-bottom: 15px;  /* فاصله بین پاراگراف‌ها */
+    line-height: 1.6;     /* خوانایی بهتر متن */
+}
+
+#parent ul li, #parent ol li {
+    margin-bottom: 10px;  /* فاصله بین آیتم‌ها */
+    line-height: 1.5;
+}
+
+/* فاصله و خوانایی تیترها */
+#parent h3 {
+    margin-top: 20px;    /* فاصله از متن قبلی */
+    margin-bottom: 10px; /* فاصله بعد تیتر */
+}
+
+/* تیترها رنگی */
+#parent h3:nth-of-type(1) { color: #2980b9; }  /* مقدمه */
+#parent h3:nth-of-type(2) { color: #d849cc; }  /* دشواری‌ها */
+#parent h3:nth-of-type(3) { color: #27ae60; }  /* نقش والدین */
+#parent h3:nth-of-type(4) { color: #8e44ad; }  /* منابع آموزشی */
+#parent h3:nth-of-type(5) { color: #16a085; }  /* فعالیت‌ها */
+#parent h3:nth-of-type(6) { color: #c0392b; }  /* نکات کلیدی */
+#parent h3:nth-of-type(7) { color: #f39c12; }  /* نتیجه نهایی */
+
+/* فاصله بین لینک‌ها برای خوانایی */
+#parent a {
+    display: inline-block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #1a73e8;
+}
+#parent a:hover {
+    text-decoration: underline;
+}
+#intro a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #6d27ae;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#intro a:hover {
+    background-color: #841e6b;
+}
+#teacher h3 {
+    margin-top: 20px;
+    color: #8e44ad;
+}
+
+#teacher p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+#teacher a {
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    padding: 10px 18px;
+    background-color: #1abfe8;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#teacher a:hover {
+    background-color: #4b15b0;
+}
+#lessonContent a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #27ae9c;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#lessonContent a:hover {
+    background-color: #1e7d84;
+}
+/* استایل دست‌سازه‌ها */
+
+#dastSazeh p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card-box {
+    background-color: rgba(240, 248, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pretty-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 22px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.pretty-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* دکمه مخصوص جئوجبرا */
+.geo-btn {
+    background: linear-gradient(45deg, #1e90ff, #00c6ff);
+}
+
+.geo-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* دکمه مخصوص سوالات بافت‌دار */
+.baft-btn {
+    background: linear-gradient(45deg, #8e44ad, #c39bd3);
+}
+
+.baft-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+#home ul {
+    margin: 15px 0;
+    padding-right: 20px;
+    line-height: 1.8;
+}
+
+#home li {
+    margin-bottom: 8px;
+}
+
+#home h3 {
+    color: #2c3e50;
+    margin-top: 20px;
+}

@@ -330,7 +330,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
 
 <script>
-  // اتصال به پروژه Supabase
   const SUPABASE_URL = "https://vobvurlnxtdyfzrftgos.supabase.co";
   const SUPABASE_ANON_KEY = "sb_publishable_aAF6JQLZopQp28UYiB-hNg_-6tVOKz0";
 
@@ -338,7 +337,9 @@
 
   const chatBox = document.getElementById("chatBox");
 
-  // 📌 ارسال پیام
+  // =========================
+  // ارسال پیام
+  // =========================
   window.addMessage = async function () {
     const input = document.getElementById("messageInput");
     const text = input.value.trim();
@@ -347,7 +348,7 @@
 
     const { error } = await supabaseClient
       .from("chat")
-      .insert([{ text: text }]);
+      .insert([{ text }]);
 
     if (error) {
       console.error("Insert error:", error);
@@ -355,9 +356,13 @@
     }
 
     input.value = "";
+
+    loadMessages(); // بعد از ارسال، رفرش لیست
   };
 
-  // 📌 گرفتن پیام‌های قبلی
+  // =========================
+  // گرفتن پیام‌ها
+  // =========================
   async function loadMessages() {
     const { data, error } = await supabaseClient
       .from("chat")
@@ -378,6 +383,7 @@
     });
   }
 
+  // اولین لود پیام‌ها
   loadMessages();
 </script>
 

@@ -344,12 +344,17 @@
   const app = initializeApp(firebaseConfig);
   const db = getDatabase();
 
-  function addMessage() {
-      let input = document.getElementById("messageInput");
-      if(input.value.trim() === "") return;
-      push(ref(db, "chat"), { text: input.value });
-      input.value = "";
-  }
+  window.addMessage = function() {
+    let input = document.getElementById("messageInput");
+
+    if(input.value.trim() === "") return;
+
+    push(ref(db, "chat"), {
+        text: input.value
+    });
+
+    input.value = "";
+}
 
   const chatBox = document.getElementById("chatBox");
   const chatRef = ref(db, "chat");
@@ -368,3 +373,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
